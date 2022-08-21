@@ -26,6 +26,23 @@ const ceaserChipher = (str, num) => {
   });
 
   return chars.join("");
+};
+
+const analyzeArray = (arr) => {
+
+  const length = arr.length;
+  const avarege = arr.reduce((sum, num) => sum + num) / length;
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+
+  return {avarege, min, max, length}
 }
 
-export {sum, capitalize, reverseString, calculator, ceaserChipher};
+export {
+  sum,
+  capitalize,
+  reverseString,
+  calculator,
+  ceaserChipher,
+  analyzeArray
+};

@@ -1,4 +1,11 @@
-import {sum, capitalize, reverseString, calculator, ceaserChipher} from './practice'
+import {
+  sum,
+  capitalize,
+  reverseString,
+  calculator,
+  ceaserChipher,
+  analyzeArray
+} from './practice';
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
@@ -33,5 +40,20 @@ describe('calculator', () => {
 describe('ceaser chipher', () => {
   test('"apple" to equal "dssoh"', () => {
     expect(ceaserChipher('apple',3)).toBe('dssoh')
+  })
+});
+
+describe('array analyzer', () => {
+  test('avarege [1, 2, 3, 4, 5] to equal 3', () => {
+    expect(analyzeArray([1, 2, 3, 4, 5]).avarege).toBe(3)
+  });
+  test('min [1, 2, 3, 4, 5] to equal 1', () => {
+    expect(analyzeArray([1, 2, 3, 4, 5]).min).toBe(1)
+  });
+  test('max [1, 2, 3, 4, 5] to equal 1', () => {
+    expect(analyzeArray([1, 2, 3, 4, 5]).max).toBe(5)
+  });
+  test('length [1, 2, 3, 4, 5] to equal 5', () => {
+    expect(analyzeArray([1, 2, 3, 4, 5]).length).toBe(5)
   })
 })
