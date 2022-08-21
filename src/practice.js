@@ -9,6 +9,23 @@ const calculator = {
   subtract: (a, b) => a - b,
   divide: (a, b) => a / b,
   multiply: (a, b) => a * b
+};
+
+const ceaserChipher = (str, num) => {
+  const shiftChar = char => {
+    let charCode = char.charCodeAt(0);
+    if (charCode + num > 122) return String.fromCharCode(charCode + num - 26)
+    else return String.fromCharCode(charCode + num)
+  };
+
+  let chars = str.split("");
+
+  chars.forEach((char, index) => {
+    if (/[a-z]/.test(char))
+      chars[index] = shiftChar(char);
+  });
+
+  return chars.join("");
 }
 
-export {sum, capitalize, reverseString, calculator};
+export {sum, capitalize, reverseString, calculator, ceaserChipher};

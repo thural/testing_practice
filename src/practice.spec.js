@@ -1,4 +1,4 @@
-import {sum, capitalize, reverseString, calculator} from './practice'
+import {sum, capitalize, reverseString, calculator, ceaserChipher} from './practice'
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
@@ -27,5 +27,11 @@ describe('calculator', () => {
   });
   test('multiplies numbers', () => {
     expect(calculator.multiply(9,3)).toBe(27)
+  })
+});
+
+describe('ceaser chipher', () => {
+  test('"apple" to equal "dssoh"', () => {
+    expect(ceaserChipher('apple',3)).toBe('dssoh')
   })
 })
